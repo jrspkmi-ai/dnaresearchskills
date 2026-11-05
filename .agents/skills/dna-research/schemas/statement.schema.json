@@ -1,0 +1,75 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Research statement row",
+  "type": "object",
+  "required": [
+    "statement_id",
+    "document_id",
+    "actor",
+    "concept",
+    "qualifier",
+    "event_time",
+    "evidence_location",
+    "review_status",
+    "reviewer"
+  ],
+  "properties": {
+    "statement_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "document_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "actor": {
+      "type": "string",
+      "minLength": 1
+    },
+    "concept": {
+      "type": "string",
+      "minLength": 1
+    },
+    "qualifier": {
+      "type": "string",
+      "minLength": 1
+    },
+    "event_time": {
+      "type": "string",
+      "format": "date"
+    },
+    "evidence_location": {
+      "type": "string",
+      "minLength": 1
+    },
+    "review_status": {
+      "enum": [
+        "AI_CANDIDATE",
+        "HUMAN_VALIDATED"
+      ]
+    },
+    "reviewer": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "review_status": {
+            "const": "HUMAN_VALIDATED"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "reviewer": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  ]
+}

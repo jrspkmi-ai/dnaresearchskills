@@ -1,0 +1,3 @@
+statement_id,document_id,actor,concept,qualifier,event_time,evidence_location,review_status,reviewer
+ST01,D01,Actor A,Public meeting,supports,2024-01-01,paragraph 1,AI_CANDIDATE,
+ST02,D02,Actor B,Public meeting,opposes,2024-01-02,paragraph 2,HUMAN_VALIDATED,Researcher 1

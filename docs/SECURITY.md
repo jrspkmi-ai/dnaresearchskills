@@ -1,0 +1,3 @@
+# Security and privacy
+
+The Python utilities use local files and standard library only. They do not make network requests. They do not install software. Use approved cloud agents only for data they may process. Discovery is scoped and outputs redacted command locations. It may invoke local Java/R commands. The R bridge invokes third-party DNA, which can write logs or change a database; work on a copy. Passwords are never arguments to the shell or written by our bridge, but an interactive console may echo them. Do not paste credentials into a chat, command, R script or public log. Keep databases, corpora, local paths and project output outside this repository. The ignore file is not a security boundary. Review all files before publication.

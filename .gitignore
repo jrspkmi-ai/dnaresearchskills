@@ -1,0 +1,16 @@
+# Never rely on ignore rules alone to protect confidential data
+.env
+.env.*
+*.dna
+*.sqlite
+*.sqlite3
+*.db
+*.jar
+*.Rhistory
+.RData
+__pycache__/
+*.pyc
+.DS_Store
+DNA_Tools/
+private/
+output/

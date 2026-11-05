@@ -1,0 +1,8 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it and the original DNA methodology."
+title: "DNA Research Skills"
+authors:
+  - name: "John R.S.P.K.M. Isa"
+type: software
+version: 0.1.0
+license: MIT

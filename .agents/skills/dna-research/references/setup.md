@@ -1,0 +1,7 @@
+# Setup and safety
+
+Run `python3 scripts/dna_tool.py discover` first. Discovery checks commands on PATH and selected common application folders only. It cannot prove absence elsewhere. Java version comes from `java -version`. DNA JAR version is inferred from its filename, not executed or verified. `rJava` and `rDNA` package loading is probed only if Rscript is available; a failed load may mean a Java configuration error. visone and Gephi checks are limited. Paths are redacted; supply explicit local paths when needed. The tool does not recursively scan home or external drives.
+
+Documents resolution: Windows uses the known-folder API, Linux uses `xdg-user-dir DOCUMENTS` if available, and macOS checks the conventional Documents folder. macOS iCloud and unusual redirects require user confirmation. If resolution fails, pass `--root` explicitly. Discovery never creates directories and does not establish write permission. Initialization creates folders only when explicitly requested and never downloads software.
+
+Ask before downloads or system changes. Verify the official source and user-selected location. Java 11 or later is required for DNA 3.1.2. Install R and rJava according to their official instructions and the host OS. For rDNA 3.1.2, refer to https://github.com/leifeld-lab/dna/releases/tag/v3.1.2 . The official rDNA package contains its own Java JAR; do not distribute it. See `docs/INSTALLATION.md` for a manual path. No local or remote changes occur automatically.
